@@ -1,0 +1,62 @@
+.footer__box {
+  width: 100%;
+  background-color: var(--clr-services-bg-w);
+
+  &--dark {
+    background-color: var(--clr-card-bg);
+    color: var(--clr-accent-1-d);
+    @include link-btn-text-dark;
+  }
+}
+
+footer {
+  @include grid-center;
+  gap: 5rem;
+  margin: 5rem auto;
+
+  @media (max-width: 37.5em) {
+    margin-bottom: 10rem;
+  }
+
+  .footer__row {
+    @include flex-space-btw;
+    width: 100%;
+
+    &__me-info {
+      text-align: center;
+      @include h4;
+      font-size: 1.2rem;
+
+      &--dark {
+        color: var(--clr-font-d);
+        @include h4-dark;
+      }
+    }
+
+    &__logos {
+      @include flex-space-btw;
+      gap: 1rem;
+
+      & img {
+        max-width: var(--main-logo-height);
+        min-width: var(--main-logo-height);
+      }
+    }
+
+    &--copy-info {
+      text-align: center;
+      @include h4;
+      font-size: 1.2rem;
+
+      &--dark {
+        color: var(--clr-font-d);
+        @include h4-dark;
+      }
+    }
+
+    &__links {
+      @include flex-center;
+      gap: 1rem;
+    }
+  }
+}

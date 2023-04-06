@@ -1,0 +1,20 @@
+@import "base/variables.scss";
+@import "base/general-text";
+@import "base/general-layout";
+@import "base/responsive.scss";
+
+@import "./app.scss";
+@import "components/navbar-mob.scss";
+@import "components/outer";
+@import "components/general/button.scss";
+@import "components/topLayerBtn";
+@import "./components/backdrop.scss";
+@import "./components/contactMe.scss";
+@import "components/layer-1/layer-1";
+@import "components/layer-2__services/services";
+@import "components/layer-3__about-me/about-me";
+@import "components/layer-4__skills/skills";
+@import "components/layer-5/layer5.scss";
+@import "components/layer-5/cta/cta.scss";
+@import "components/layer-5/footer/footer";
+// @import "components/layer-6/contact-me/contact-me";

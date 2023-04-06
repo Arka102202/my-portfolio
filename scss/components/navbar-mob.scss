@@ -1,0 +1,32 @@
+.navbar-mob {
+  display: none;
+
+  @media (max-width: 37.5em) {
+    width: 100%;
+    @include flex-space-btw;
+    position: fixed;
+    bottom: 0;
+    padding: 0 2rem;
+    z-index: 4;
+
+    border-top: 2px solid var(--clr-accent-1-w);
+    background-color: #232323;
+  }
+
+  &--dark {
+    @media (max-width: 37.5em) {
+      border-top: 2px solid var(--clr-cta-bg-second-d);
+      background-color: #e7e7e7;
+    }
+  }
+
+  &__btn {
+    max-width: var(--main-logo-height);
+    min-width: var(--main-logo-height);
+    @include grid-center;
+
+    & img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.section__info--skills {
+  align-items: flex-start;
+  gap: 5rem;
+  @media (max-width: 66em) {
+    gap: 3rem;
+  }
+
+  @media (max-width: 56em) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 50em) {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.section__info__card {
+  &--skills {
+    width: 35rem;
+    height: 42rem;
+    gap: 1rem;
+
+    @media (max-width: 66em) {
+      width: 32rem;
+    }
+
+    @media (max-width: 56em) {
+      padding: 2rem !important;
+      width: 27rem;
+    }
+    @media (max-width: 50em) {
+      width: 35rem;
+      margin-bottom: 2rem;
+      height: auto;
+    }
+    @media (max-width: 50em) {
+      width: 32rem;
+    }
+    @media (max-width: 43em) {
+      width: 28rem;
+    }
+    @media (max-width: 37.5em) {
+      width: 32rem;
+    }
+    @media (max-width: 24em) {
+      width: 32rem;
+    }
+    &--dark {
+      height: 45rem;
+      gap: 0.5rem;
+
+      @media (max-width: 56em) {
+        padding: 2rem !important;
+      }
+    }
+  }
+
+  &--special {
+    border: 1px solid var(--clr-font-w-h4-span);
+
+    &--dark {
+      border: 1px solid var(--clr-accent-1-d);
+    }
+  }
+
+  &__logo {
+    max-width: var(--main-logo-height);
+    min-width: var(--main-logo-height);
+    filter: saturate(0%) contrast(0%) brightness(10);
+    margin-bottom: 3rem;
+  }
+
+  &__h3--skills {
+    margin-bottom: 2rem;
+  }
+
+  &__skill {
+    @include flex-space-btw;
+    gap: 2rem;
+
+    &__logo {
+      max-width: var(--skill-logo-height);
+      min-width: var(--skill-logo-height);
+      max-height: var(--skill-logo-height);
+      min-height: var(--skill-logo-height);
+
+      border-radius: 50%;
+      background-color: var(--clr-skill-logo-bg-w);
+
+      &--dark {
+        background-color: transparent;
+      }
+
+      @include grid-center;
+      & img {
+        max-width: var(--logo-height-skills);
+        min-width: var(--logo-height-skills);
+      }
+    }
+
+    &__name {
+      @include link-btn-text;
+      &--dark {
+        @include link-btn-text-dark;
+      }
+    }
+  }
+}

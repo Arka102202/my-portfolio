@@ -1,0 +1,215 @@
+.form-box {
+  width: 100vw;
+  height: 100vh;
+  @include grid-center;
+  position: absolute;
+}
+
+.message-box {
+  color: #fff;
+  position: fixed;
+  bottom: 10rem;
+  padding: 0.5rem 2rem;
+  @include body-text;
+  font-size: 1.2rem;
+  z-index: 10;
+
+  &--dark {
+    @include border-rad;
+    font-family: "Lato";
+  }
+}
+
+.sms--confirm {
+  background-color: #297c42fb;
+}
+
+.sms--error {
+  background-color: #ff0404;
+}
+
+.contact-me {
+  z-index: 10;
+  @include flex-space-btw-start;
+  background-color: var(--clr-card-bg-d);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(30px) brightness(120%);
+
+  padding: 2rem;
+  position: relative;
+
+  @media (max-width: 40em) {
+    @include grid-start;
+  }
+  @media (max-width: 37.5em) {
+    padding: 1rem;
+  }
+  @media (max-width: 24em) {
+    width: 95%;
+  }
+  @media (max-width: 22em) {
+    width: 85%;
+  }
+
+  &__links {
+    @include flex-col-center-start;
+    gap: 2rem;
+    @media (max-width: 50em) {
+      gap: 1rem;
+    }
+  }
+
+  &__link {
+    @include flex-space-btw-start;
+
+    &__logo {
+      max-width: var(--logo-height);
+      min-width: var(--logo-height);
+      @media (max-width: 40em) {
+        max-width: 2rem;
+        min-width: 2rem;
+      }
+      padding: 0.7rem 0;
+      & img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+      @include grid-start-start;
+
+      @include body-text;
+      font-family: "Lora";
+      font-weight: 600;
+      font-size: 1.6rem;
+
+      &--dark {
+        color: #fff;
+        font-family: "Lato";
+      }
+    }
+  }
+
+  &__form {
+    @include grid-start-start;
+    gap: 2rem;
+    color: var(--clr-font-d);
+
+    & input,
+    & button,
+    & textarea {
+      background-color: #2323239c;
+      color: #fff;
+      font-family: "Lora";
+      @include body-text;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      cursor: text;
+      &::placeholder {
+        color: #fff;
+        @include body-text;
+        font-family: "Lora";
+        font-size: 1.6rem;
+      }
+    }
+
+    & input,
+    & button {
+      width: 40rem;
+      height: 3rem;
+
+      @media (max-width: 50em) {
+        width: 30rem;
+      }
+
+      @media (max-width: 40em) {
+        width: 95%;
+      }
+
+      @media (max-width: 24em) {
+        width: 95%;
+      }
+      @media (max-width: 22em) {
+        width: 92%;
+      }
+
+      &:focus {
+        box-shadow: inset 0 0 0 1px #232323;
+      }
+    }
+
+    & button {
+      text-align: center;
+      @include transition;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        background-color: #53b972fb;
+      }
+
+      & img {
+        width: var(--logo-height);
+        animation: rotate-bar 2s infinite linear;
+
+        @keyframes rotate-bar {
+          0% {
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    & textarea {
+      width: 42rem;
+      border: none;
+
+      @media (max-width: 50em) {
+        width: 32rem;
+      }
+      @media (max-width: 40em) {
+        width: 40rem;
+      }
+
+      @media (max-width: 24em) {
+        width: 35rem;
+      }
+      @media (max-width: 22em) {
+        width: 28rem;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: inset 0 0 0 1px #232323;
+        border-radius: 0;
+      }
+    }
+
+    &--dark input,
+    &--dark button,
+    &--dark textarea {
+      background-color: #dddddd;
+      color: #232323;
+      font-family: "Lato";
+      &::placeholder {
+        color: #232323;
+        @include body-text;
+        font-family: "Lato";
+        font-size: 1.6rem;
+      }
+
+      &:focus {
+        box-shadow: inset 0 0 0 1px #fff;
+      }
+    }
+  }
+}
+
+.error {
+  background-color: #ffa9a985 !important;
+}

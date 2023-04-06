@@ -1,0 +1,250 @@
+.section-box {
+  width: 100%;
+  background-color: var(--clr-services-bg-w);
+  padding-bottom: var(--section-bottom-margin);
+
+  &--dark {
+    background-color: transparent !important;
+  }
+}
+
+.section {
+  @include grid-start;
+
+  margin: 0 auto;
+  max-width: var(--section-width);
+
+  padding: var(--section-padding);
+
+  @media (max-width: 37.5rem) {
+    width: 90%;
+  }
+  @media (max-width: 24em) {
+    width: 100%;
+  }
+
+  &__heading {
+    margin-bottom: var(--section-heading-bottom-margin);
+
+    &__h2--2 {
+      @include h2--2;
+
+      &--dark {
+        @include h2--2-dark;
+      }
+    }
+
+    &__h4 {
+      @include h4;
+      &--dark {
+        @include h4-dark;
+      }
+    }
+  }
+
+  &__info {
+    width: 100%;
+    margin-bottom: var(--info-margin-bottom);
+    @include flex-space-btw;
+    gap: var(--grid-col-gap);
+    @media (max-width: 66em) {
+      gap: 5rem;
+    }
+    @media (max-width: 50em) {
+      gap: 3rem;
+    }
+    @media (max-width: 45em) {
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 37.5rem) {
+      @include grid-start;
+    }
+
+    &__card {
+      @include flex-col;
+      gap: var(--flex-gap);
+      padding: var(--card-padding);
+      @media (max-width: 50em) {
+        padding: 2rem;
+        padding-right: 1rem;
+      }
+      height: auto;
+
+      &--dark {
+        background-color: var(--clr-card-bg);
+        box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.5);
+        @include border-rad;
+        backdrop-filter: blur(2rem);
+        height: 45rem;
+        @media (max-width: 60em) {
+          height: 47rem;
+        }
+        @media (max-width: 53em) {
+          height: 50rem;
+        }
+        @media (max-width: 50em) {
+          height: 46rem;
+        }
+        @media (max-width: 45em) {
+          height: 48rem;
+        }
+        @media (max-width: 43em) {
+          height: 50rem;
+        }
+        @media (max-width: 37.5em) {
+          height: auto;
+        }
+      }
+
+      &--special {
+        border: 1px solid var(--clr-font-w-h4-span);
+        &--dark {
+          border: 1px solid var(--clr-card-border);
+        }
+      }
+
+      &__logo {
+        max-width: var(--main-logo-height);
+        min-width: var(--main-logo-height);
+      }
+
+      &__h3 {
+        @include h3;
+        margin-bottom: var(--card-heading-bottom-margin);
+        &--dark {
+          $color: var(--lin-grad-text);
+          @include text-grad($color);
+        }
+      }
+
+      &__quota {
+        @include flex-space-btw-start;
+        flex: 1;
+        margin-bottom: 1rem;
+
+        &__logo {
+          max-width: var(--logo-height);
+          min-width: var(--logo-height);
+
+          & img {
+            width: 100%;
+            @media (max-width: 50em) {
+              width: 120%;
+            }
+          }
+        }
+
+        &__text {
+          @include flex-col-space-btw-end;
+          height: 10rem;
+
+          @media (max-width: 53em) {
+            height: 12rem;
+          }
+
+          @media (max-width: 37.5em) {
+            height: auto;
+          }
+
+          &__quotation {
+            @include body-text;
+          }
+
+          &__author {
+            justify-self: end;
+
+            @include body-text;
+
+            @include flex-space-btw;
+            gap: 1rem;
+
+            &__bar {
+              $color: #232323;
+              @include highlight-bar($color);
+              @media (max-width: 50em) {
+                width: 3rem;
+              }
+
+              &--dark {
+                $color: var(--clr-font-d);
+                @include highlight-bar($color);
+                @media (max-width: 50em) {
+                  width: 3rem;
+                }
+              }
+            }
+
+            &__name {
+              @include body-text;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      &__why {
+        @include flex-space-btw-start;
+        @media (max-width: 43em) {
+          height: 22rem;
+        }
+        @media (max-width: 40em) {
+          height: 24rem;
+        }
+        @media (max-width: 37.5em) {
+          height: auto;
+        }
+
+        &__logo {
+          max-width: var(--logo-height);
+          min-width: var(--logo-height);
+
+          & img {
+            width: 100%;
+            @media (max-width: 50em) {
+              width: 120%;
+            }
+          }
+        }
+
+        &__text-box {
+          @include body-text;
+          @include grid-start;
+          gap: 1rem;
+        }
+
+        &__text {
+          & .span {
+            color: var(--clr-font-w-h4-span);
+            font-weight: 600;
+
+            &--dark {
+              color: var(--clr-font-d-span);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__conclusion {
+    @include body-text;
+    margin: 0 auto;
+    max-width: var(--section-width);
+    color: var(--clr-font-w-h4-span);
+    font-weight: 700;
+
+    &--dark {
+      color: var(--clr-font-d-span);
+      padding: var(--section-padding);
+      @media (max-width: 66em) {
+        padding: 0;
+        margin-top: 1rem;
+      }
+    }
+
+    &::first-letter {
+      font-size: 3rem;
+    }
+  }
+}

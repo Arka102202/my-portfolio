@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Yeseva+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+@font-face {
+  font-family: "dahlia";
+  font-weight: 700;
+  src: url("./assets/fonts/dahlia/dahlia-bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "designer";
+  font-weight: 700;
+  src: url("./assets/fonts/designer/GameOfSquids-1GMVL.ttf") format("truetype");
+}
+@font-face {
+  font-family: "gilroy";
+  font-weight: 400;
+  src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "gilroy";
+  font-weight: 500;
+  src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "gilroy";
+  font-weight: 600;
+  src: url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "gilroy";
+  font-weight: 700;
+  src: url("./assets/fonts/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "nordeco";
+  font-weight: 700;
+  src: url("./assets/fonts/nordeco/Nordeco-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "nordeco";
+  font-weight: 600;
+  src: url("./assets/fonts/nordeco/Nordeco-SemiBold.ttf") format("truetype");
+}
+
+@mixin h1 {
+  font-size: 6.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "dahlia";
+  @media (max-width: 60em) {
+    font-size: 6rem;
+  }
+  @media (max-width: 56em) {
+    font-size: 5.6rem;
+  }
+  @media (max-width: 35em) {
+    font-size: 5rem;
+  }
+  @media (max-width: 30em) {
+    font-size: 4.6rem;
+  }
+  @media (max-width: 30em) {
+    font-size: 4.3rem;
+  }
+  @media (max-width: 22em) {
+    font-size: 3.8rem;
+  }
+}
+
+@mixin h1-dark {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: "designer";
+
+  @media (max-width: 68em) {
+    font-size: 4.8rem;
+  }
+  @media (max-width: 66em) {
+    font-size: 4.6rem;
+  }
+  @media (max-width: 60em) {
+    font-size: 4rem;
+  }
+  @media (max-width: 56em) {
+    font-size: 3.8rem;
+  }
+  @media (max-width: 50em) {
+    font-size: 3.2rem;
+  }
+  @media (max-width: 45em) {
+    font-size: 3rem;
+  }
+  @media (max-width: 43em) {
+    font-size: 2.8rem;
+  }
+  // @media (max-width: 24em) {
+  //   font-size: 2.6rem;
+  // }
+}
+
+@mixin h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  @media (max-width: 60em) {
+    font-size: 3rem;
+  }
+  @media (max-width: 50em) {
+    font-size: 2.4rem;
+  }
+  @media (max-width: 24em) {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin h2--2 {
+  font-family: "dahlia";
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  @media (max-width: 60em) {
+    font-size: 3rem;
+  }
+  @media (max-width: 50em) {
+    font-size: 2.4rem;
+  }
+}
+
+@mixin h2--2-dark {
+  font-family: "nordeco";
+  font-weight: 700;
+  $color: var(--lin-grad-text);
+  @include text-grad($color);
+}
+
+@mixin h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  @media (max-width: 50em) {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin link-btn-text {
+  font-family: "Lora";
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  @media (max-width: 27em) {
+    letter-spacing: 1.5px;
+  }
+}
+
+@mixin link-btn-text-dark {
+  font-family: "Lato";
+}
+
+@mixin h4 {
+  @include link-btn-text;
+  color: var(--clr-font-w-h4-span);
+}
+
+@mixin h4-dark {
+  color: var(--clr-font-d);
+  font-family: "Lato";
+}
+
+@mixin body-text {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  @media (max-width: 50em) {
+    letter-spacing: 1.5px;
+  }
+  @media (max-width: 27em) {
+    letter-spacing: 1.2px;
+  }
+}

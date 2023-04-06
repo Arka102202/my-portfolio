@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 37.5em) {
+    font-size: 56.25%;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.main-body {
+  background-color: var(--clr-main-bg-w);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  color: var(--clr-font-w);
+
+  font-family: "Lora", serif;
+
+  &--dark {
+    background-color: var(--clr-main-bg-d);
+    color: var(--clr-font-d);
+    font-family: "Lato";
+    font-weight: 400;
+  }
+}
+
+a,
+button,
+input {
+  all: unset;
+  cursor: pointer;
+}
+
+@mixin grid-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+@mixin grid-start-start {
+  display: grid;
+  justify-items: start;
+  align-items: start;
+}
+
+@mixin grid-center-start {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+@mixin grid-start {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+}
+@mixin grid-end {
+  display: grid;
+  justify-items: end;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-stretch {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@mixin flex-space-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-space-btw-start {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  @media (max-width: 45em) {
+    gap: 2rem;
+  }
+}
+
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flex-col-center-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flex-col-space-btw-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin border-rad {
+  border-radius: 1rem;
+}
+
+@mixin transition {
+  transition: all 0.3s;
+}
+
+@mixin highlight-bar($color) {
+  width: 5rem;
+  height: 0.3rem;
+  background-color: $color;
+  border-radius: 0.5rem;
+}
+@mixin underline($color) {
+  background-size: 100% 0.3rem;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-image: $color;
+}
+
+@mixin text-grad($color) {
+  background: $color;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+@mixin btn($color) {
+  @include flex-space-btw;
+  gap: 1rem;
+  height: var(--btn-height);
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  box-shadow: inset 0 0 0 1px $color;
+}

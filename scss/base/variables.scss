@@ -1,0 +1,106 @@
+$vars: (
+  section-width: 120rem,
+  section-padding: 2rem,
+  section-bottom-margin: 8rem,
+  section-heading-bottom-margin: 5rem,
+  top-layer-top-margin: 7rem,
+  cta-max-width: 110rem,
+  cta-left-margin: 5rem,
+  skill-logo-height: 6rem,
+
+  card-padding: 3rem,
+  card-heading-bottom-margin: 3rem,
+
+  info-margin-bottom: 2rem,
+
+  nav-footer-width: 80%,
+
+  btn-resume-min-width: 13.4rem,
+  btn-height: 4.5rem,
+  main-logo-height: 5rem,
+  btn-radius: 3rem,
+  btn-padding: 0 2rem,
+  btn-top-margin: 4rem,
+  logo-height: 3rem,
+  logo-height-skills: 4rem,
+  logo-height-about-me-btn: 2rem,
+
+  flex-gap: 1rem,
+  grid-col-gap: 10rem,
+
+  clr-nav-bg: rgba(57, 57, 57, 0.7),
+  clr-main-bg-w: #fff,
+  clr-services-bg-w: #fef4e6,
+  clr-about-me-bg-w: #ccd5ae,
+  clr-skill-logo-bg-w: #f1b77f,
+  clr-cta-bg-main-w: #fef4e6,
+  clr-cta-bg-second-w: #627d67,
+  clr-btn-hover-bg-w: #23232360,
+  clr-accent-1-w: #f08c00,
+  clr-font-w: #212529,
+  clr-font-w-h4-span: #903a00,
+
+  clr-about-me-bg-d: rgba(98, 98, 98, 0.1),
+  clr-cta-bg-main-d: #ffd9d200,
+  clr-cta-bg-second-d: #40469a,
+  clr-footer-bg-d: #333333,
+  clr-main-bg-d: #232323,
+  clr-accent-1-d: #cfbbf0,
+  clr-font-d-span: #8871ad,
+  clr-font-d: #cfcfcf,
+  clr-card-bg: rgba(98, 98, 98, 0.05),
+  clr-card-border: rgba(255, 255, 255, 0.2),
+  clr-btn-hover-bg-d: rgba(177, 177, 177, 0.38),
+  lin-grad-text:
+    linear-gradient(
+      51deg,
+      rgba(51, 194, 204, 1) 0%,
+      rgba(92, 135, 224, 1) 50%,
+      rgba(247, 177, 253, 1) 100%
+    ),
+  lin-grad-others:
+    linear-gradient(51deg, rgba(51, 194, 204, 1) 0%, rgba(62, 61, 137, 1) 100%),
+  lin-grad-white:
+    linear-gradient(51deg, rgba(240, 140, 0, 1) 0%, rgba(240, 140, 0, 1) 100%),
+);
+
+:root {
+  @each $prop, $val in $vars {
+    --#{$prop}: #{$val};
+  }
+
+  @media (max-width: 68em) {
+    --section-bottom-margin: 6rem;
+  }
+  @media (max-width: 60em) {
+    --btn-height: 4.2rem;
+  }
+
+  @media (max-width: 56em) {
+    --main-logo-height: 4.5rem;
+    --logo-height-skills: 3.8rem;
+  }
+
+  @media (max-width: 50em) {
+    --logo-height: 2.5rem;
+    --btn-height: 4rem;
+    --main-logo-height: 4rem;
+    --btn-padding: 0 1.8rem;
+    --section-bottom-margin: 4rem;
+    --logo-height-about-me-btn: 1.5rem;
+  }
+  @media (max-width: 43em) {
+    --main-logo-height: 3.5rem;
+    --btn-resume-min-width: 12rem;
+  }
+
+  @media (max-width: 40em) {
+    --section-bottom-margin: 3rem;
+    --btn-height: 4rem;
+    --btn-resume-min-width: 13rem;
+  }
+  @media (max-width: 37.5em) {
+    --cta-left-margin: 2rem;
+    --section-padding: 1rem;
+  }
+}

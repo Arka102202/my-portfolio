@@ -1,0 +1,237 @@
+.cta {
+  @include grid-center;
+  margin: 0 auto;
+  max-width: var(--cta-max-width);
+  height: 60rem;
+  position: relative;
+  @media (max-width: 66em) {
+    margin: 0 2rem;
+  }
+  @media (max-width: 50em) {
+    height: 50rem;
+  }
+  @media (max-width: 37.5em) {
+    width: 78%;
+  }
+
+  &--dark {
+    color: var(--clr-font-d);
+
+    @media (max-width: 50em) {
+      height: 45rem;
+    }
+  }
+
+  &__info {
+    @include flex-space-btw;
+    background-color: var(--clr-cta-bg-main-w);
+    z-index: 1;
+    border-bottom-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+    position: relative;
+
+    @media (max-width: 37.5em) {
+      width: 120%;
+    }
+
+    &::before {
+      content: "So,";
+      position: absolute;
+      top: -10%;
+      left: var(--cta-left-margin);
+      @include h1;
+    }
+
+    &--dark {
+      background-color: var(--clr-cta-bg-main-d);
+      backdrop-filter: blur(7rem);
+
+      &::before {
+        $color: var(--lin-grad-text);
+        @include text-grad($color);
+      }
+    }
+
+    &__text-link {
+      @include flex-col;
+      margin: var(--cta-left-margin);
+      @media (max-width: 66em) {
+        margin: 3rem var(--cta-left-margin);
+      }
+      @media (max-width: 56em) {
+        margin: 4.3rem var(--cta-left-margin);
+        margin-right: 0;
+      }
+      @media (max-width: 35em) {
+        margin: 3.5rem var(--cta-left-margin);
+      }
+      @media (max-width: 30em) {
+        margin: 3rem var(--cta-left-margin);
+      }
+      @media (max-width: 22em) {
+        margin: 2.5rem var(--cta-left-margin);
+      }
+    }
+
+    &__text {
+      &__h2 {
+        @include h2--2;
+
+        &--2 {
+          margin-bottom: 2rem;
+        }
+      }
+      &__text {
+        @include body-text;
+        font-weight: 700;
+
+        &--special {
+          @include h4;
+          font-size: 1.2rem;
+          margin-top: 1rem;
+
+          &--dark {
+            @include h4-dark;
+            $color: var(--lin-grad-text);
+            @include text-grad($color);
+          }
+        }
+      }
+    }
+
+    &__img {
+      width: 30%;
+
+      @media (max-width: 66em) {
+        width: 35%;
+      }
+      @media (max-width: 50em) {
+        width: 40%;
+      }
+      @media (max-width: 37.5em) {
+        width: 45%;
+        position: absolute;
+        top: -10rem;
+        right: 0;
+      }
+      @media (max-width: 30em) {
+        width: 48%;
+        top: -8rem;
+      }
+      @media (max-width: 27em) {
+        top: -10rem;
+        width: 54%;
+      }
+      @media (max-width: 24em) {
+        top: -7rem;
+        width: 56%;
+      }
+      @media (max-width: 22em) {
+        width: 54%;
+        top: -6rem;
+        right: -1rem;
+      }
+
+      &--dark {
+        width: 40%;
+        padding: 2rem;
+
+        @media (max-width: 66em) {
+          width: 45%;
+        }
+        @media (max-width: 56em) {
+          width: 50%;
+        }
+        @media (max-width: 50em) {
+          width: 57%;
+        }
+        @media (max-width: 37.5em) {
+          top: -12rem;
+          width: 60%;
+        }
+        @media (max-width: 30em) {
+          top: -12rem;
+          width: 68%;
+        }
+        @media (max-width: 27em) {
+          top: -8rem;
+          width: 62%;
+        }
+        @media (max-width: 24em) {
+          top: -10rem;
+          right: -2rem;
+          width: 70%;
+        }
+        @media (max-width: 22em) {
+          width: 72%;
+        }
+        @media (max-width: 20em) {
+          width: 70%;
+          top: -8rem;
+        }
+      }
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 4rem;
+    @include link-btn-text;
+
+    &:hover &__bar {
+      width: 15rem;
+    }
+
+    &__text {
+      height: 2rem;
+
+      @include transition;
+      transform-origin: bottom;
+
+      &--dark {
+        @include link-btn-text-dark;
+      }
+    }
+
+    &__bar {
+      $color: var(--clr-accent-1-w);
+      @include highlight-bar($color);
+
+      margin-top: 0.5rem;
+
+      @include transition;
+    }
+
+    &__logo {
+      max-width: 2rem;
+      min-width: 2rem;
+    }
+  }
+
+  &__bg {
+    height: 50%;
+    width: 100vw;
+    position: absolute;
+    background-color: var(--clr-cta-bg-second-w);
+    bottom: -5%;
+
+    @media (max-width: 56em) {
+      left: -2rem;
+    }
+
+    @media (max-width: 50em) {
+      height: 45%;
+      bottom: 0%;
+    }
+
+    @media (max-width: 37.5em) {
+      left: -14%;
+    }
+
+    &--dark {
+      background-color: var(--clr-cta-bg-second-d);
+    }
+  }
+}

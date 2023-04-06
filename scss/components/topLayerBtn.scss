@@ -1,0 +1,22 @@
+.btn-box {
+  @include grid-center;
+  gap: 0.5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3;
+  @media (max-width: 37.5em) {
+    display: none;
+  }
+}
+
+.btn--square {
+  width: var(--main-logo-height);
+  height: var(--main-logo-height);
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    @include border-rad;
+  }
+}

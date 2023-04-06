@@ -1,0 +1,117 @@
+.section-box--about-me {
+  background-color: var(--clr-about-me-bg-w);
+}
+
+.section__info {
+  &--dark {
+    background-color: var(--clr-about-me-bg-d);
+    justify-content: center;
+    padding: var(--card-padding);
+    @include border-rad;
+  }
+
+  &__text-btn {
+    @include flex-col;
+    gap: 1rem;
+
+    @media (max-width: 37.5rem) {
+      order: 1;
+    }
+  }
+
+  &__text {
+    @include body-text;
+
+    &--bold {
+      @include body-text;
+      font-weight: 700;
+    }
+  }
+
+  &__btns {
+    @include flex-start;
+    gap: 2rem;
+    margin-top: var(--btn-top-margin);
+    @media (max-width: 30rem) {
+      @include flex-col-center-start;
+    }
+  }
+
+  &__btn {
+    $color: rgba(0, 0, 0, 0);
+    @include btn($color);
+    @include link-btn-text;
+    @include transition;
+    border-radius: 0;
+    cursor: pointer;
+
+    & img {
+      max-width: var(--logo-height-about-me-btn);
+      min-width: var(--logo-height-about-me-btn);
+    }
+  }
+
+  &__btn--1 {
+    background-color: var(--clr-main-bg-d);
+    min-width: var(--btn-resume-min-width);
+
+    &:hover {
+      background-color: var(--clr-btn-hover-bg-w);
+    }
+
+    &--dark {
+      background: var(--lin-grad-others);
+      border-radius: var(--btn-radius);
+      box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.3);
+      @include link-btn-text-dark;
+
+      &:hover {
+        box-shadow: inset 0 0 0 2px var(--clr-accent-1-d);
+      }
+    }
+
+    &__text {
+      color: var(--clr-main-bg-w);
+    }
+  }
+
+  &__btn--2 {
+    box-shadow: inset 0 0 0 1px var(--clr-main-bg-d);
+
+    &:hover {
+      background-color: var(--clr-btn-hover-bg-w);
+    }
+
+    &--dark {
+      border-radius: var(--btn-radius);
+      box-shadow: inset 0 0 0 1px var(--clr-accent-1-d);
+      @include link-btn-text-dark;
+      &:hover {
+        background-color: var(--clr-btn-hover-bg-d);
+      }
+    }
+  }
+}
+
+.section__img {
+  max-width: 30%;
+  min-width: 20%;
+  flex-shrink: 0;
+
+  @media (max-width: 37.5rem) {
+    order: 0;
+    justify-self: center;
+    max-width: 25rem;
+    min-width: 25rem;
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  &--dark {
+    & img {
+      @include border-rad;
+    }
+  }
+}
