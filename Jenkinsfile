@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('deploy') {
       steps {
-        sh 'npn i && npm start'
+        sh 'npm i && npm start'
       }
     }
 
