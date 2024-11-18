@@ -38,10 +38,19 @@ function App() {
         width: getComputedStyle(document.querySelector("body")).width,
       })
     );
-    setTimeout(() => {
-      setDisplayWelcomeAnim(false);
-      document.querySelector("body").style.overflowY = "auto";
-    }, 1000);
+    // setTimeout(() => {
+    //   setDisplayWelcomeAnim(false);
+    //   document.querySelector("body").style.overflowY = "auto";
+    // }, 1000);
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        setDisplayWelcomeAnim(false);
+        document.querySelector("body").style.overflowY = "auto";
+      }, 1000);
+    });
+
+
   }, []);
 
   return (
